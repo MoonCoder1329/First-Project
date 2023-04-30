@@ -1,4 +1,6 @@
 
+import math
+
 
 caesarPass = True
 
@@ -17,8 +19,15 @@ while caesarPass:
     for letter in start_text:
       newIndex = alphabet.index(letter) + shift_amount
       lastIndex = alphabet.index(letter) - shift_amount
+
+      if lastIndex < (len(alphabet)*-1):
+        while lastIndex <= len(alphabet)*-1:
+          lastIndex +=len((alphabet))
+
       if newIndex > len(alphabet):
-          newIndex = newIndex - len(alphabet)
+        while newIndex > len(alphabet):
+          newIndex -= len(alphabet)
+
       newPass += alphabet[newIndex]
       lastPass += alphabet[lastIndex]
     if cipher_direction == "encode":
