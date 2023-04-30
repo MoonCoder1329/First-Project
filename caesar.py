@@ -22,7 +22,7 @@ while caesarPass:
           lastIndex +=len((alphabet))
 
       if newIndex > len(alphabet):
-        while newIndex > len(alphabet):
+        while newIndex >= len(alphabet):
           newIndex -= len(alphabet)
 
       newPass += alphabet[newIndex]
