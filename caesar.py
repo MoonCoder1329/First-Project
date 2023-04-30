@@ -1,7 +1,4 @@
 
-import math
-
-
 caesarPass = True
 
 while caesarPass:
